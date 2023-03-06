@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/nameBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="none"
+            android:text="Name"
+            android:hint="Titre"
+            android:textColor="@color/teal_700"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:editable="false" />
+
+        <TextView
+            android:id="@+id/labelAuthors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Auteur(s)"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editAuthors"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <EditText
+            android:id="@+id/editAuthors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:enabled="true"
+            android:inputType="textMultiLine"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/editYear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/nameBook"
+            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/labelYear"
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Année de publication"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editYear"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <EditText
+            android:id="@+id/editYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:enabled="true"
+            android:inputType="textMultiLine"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/editGenres"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/editAuthors" />
+
+        <TextView
+            android:id="@+id/labelGenres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Genre(s)"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editGenres"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <EditText
+            android:id="@+id/editGenres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:enabled="true"
+            android:inputType="textMultiLine"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/editPublisher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/editYear" />
+
+        <TextView
+            android:id="@+id/labelPublisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Éditeur"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editPublisher"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <EditText
+            android:id="@+id/editPublisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:enabled="true"
+            android:inputType="textMultiLine"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/buttonUpdate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/editGenres" />
+
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="60dp"
+            android:text="Mettre à jour"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelPublisher"
+            app:layout_constraintVertical_bias="0.56" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:text="Revenir"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonUpdate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/buttonUpdate" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="38dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
